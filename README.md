@@ -1,70 +1,62 @@
-Prognozowanie ceny złota (XAUPLN)
-Autor: Jan Zdaniewicz
-Środowisko: Jupyter Notebook
-Język: Python
+# 📊 Prognozowanie ceny złota (XAUPLN)
 
-📌 Cel projektu
-Celem projektu jest stworzenie modelu predykcyjnego do prognozowania dziennej ceny złota (XAUPLN) na podstawie danych historycznych i wybranych zmiennych makroekonomicznych oraz rynkowych.
+**Autor:** Jan Zdaniewicz  
+**Środowisko:** Jupyter Notebook  
+**Język:** Python
 
-🧩 Wykorzystane dane
-W analizie uwzględniono dane dzienne z okresu 19.07.2010 – 12.06.2025 dla następujących instrumentów finansowych:
+## 🎯 Cel projektu
 
-Symbol	Opis
-XAUPLN	Złoto / PLN (zmienna celu)
-XAGPLN	Srebro / PLN
-XPTPLN	Platyna / PLN
-BTCPLN	Bitcoin / PLN
-USDPLN	Dolar amerykański / PLN
+Celem projektu jest stworzenie modelu predykcyjnego do prognozowania dziennej ceny złota (**XAUPLN**) na podstawie danych historycznych oraz wybranych zmiennych makroekonomicznych i rynkowych.
 
-Źródło danych: Stooq.pl
+## 📁 Wykorzystane dane
 
-⚙️ Metodologia
-Wczytanie danych z plików CSV
+W analizie wykorzystano dzienne dane z okresu **19.07.2010 – 12.06.2025** dla następujących instrumentów:
 
-Filtrowanie danych do wspólnego zakresu czasowego
+| Symbol   | Opis                             |
+|----------|----------------------------------|
+| XAUPLN   | Złoto / PLN *(zmienna celu)*     |
+| XAGPLN   | Srebro / PLN                     |
+| XPTPLN   | Platyna / PLN                    |
+| BTCPLN   | Bitcoin / PLN                    |
+| USDPLN   | Dolar amerykański / PLN          |
 
-Łączenie danych po dacie
+📌 Źródło danych: [Stooq.pl](https://stooq.pl)
 
-Eksploracyjna analiza danych (EDA)
+## ⚙️ Metodologia
 
-Modelowanie regresyjne:
+- 📥 Wczytanie danych z plików CSV  
+- 🗃 Filtrowanie danych do wspólnego zakresu czasowego  
+- 🔗 Łączenie danych po dacie  
+- 📊 Eksploracyjna analiza danych (EDA)  
+- 🧠 Modelowanie regresyjne:
+  - Regresja liniowa (`scikit-learn`)
+  - Sieć neuronowa (`Keras` / `TensorFlow`)
+- 🧾 Ocena modeli przy pomocy metryk:
+  - MAE, MSE, RMSE, R²
 
-Regresja liniowa (sklearn)
+## 🧪 Technologie i biblioteki
 
-Model sieci neuronowej (Keras / TensorFlow)
+- `pandas`, `numpy`  
+- `matplotlib`, `seaborn`  
+- `scikit-learn`  
+- `tensorflow.keras`
 
-Ocena modelu przy pomocy metryk:
+## 📂 Struktura projektu
 
-MAE, MSE, RMSE, R²
+- **Projekt/**
+  - **Data/**
+    - `xaupln_d.csv`
+    - `xagpln_d.csv`
+    - *(inne pliki danych)*
+  - `Jan_Zdaniewicz_190023.ipynb`
+  - `README.md`
 
-🧠 Technologie i biblioteki
-pandas, numpy
+## ✅ Wymagania środowiskowe
 
-matplotlib, seaborn
+- Python 3.8+
+- Jupyter Notebook
+- Biblioteki: jak wyżej
 
-scikit-learn
+## 📬 Kontakt
 
-tensorflow.keras
-
-📈 Wyniki
-Projekt zakłada porównanie efektywności modeli na podstawie ich dokładności predykcji oraz identyfikację zmiennych mających największy wpływ na zmienność ceny złota.
-
-🗂 Struktura katalogów
-Kopiuj
-Edytuj
-Projekt/
-├── Data/
-│   ├── xaupln_d.csv
-│   ├── xagpln_d.csv
-│   └── ...
-├── Jan_Zdaniewicz_190023.ipynb
-└── README.md
-✅ Wymagania
-Python 3.8+
-
-Środowisko Jupyter
-
-Pakiety wskazane w sekcji „Technologie”
-
-📬 Kontakt
-W razie pytań lub sugestii, proszę o kontakt przez GitHub lub e-mail.
+Masz pytania? Skontaktuj się przez GitHub lub mailowo.
